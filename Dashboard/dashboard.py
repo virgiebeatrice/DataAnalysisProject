@@ -8,7 +8,7 @@ import plotly.express as px
 st.title("Dashboard Brazilian E-Commerce")
 @st.cache_data
 def load_data():
-    merged_data = pd.read_csv(r"C:\Users\User\Downloads\Proyek Analisis Data\Dashboard\merged_data1.csv", parse_dates=['order_purchase_timestamp'])
+    merged_data = pd.read_csv("Dashboard/merged_data1.csv", parse_dates=['order_purchase_timestamp'])
     
     # Buat kolom tambahan
     merged_data['order_year_month'] = merged_data['order_purchase_timestamp'].dt.to_period('M').astype(str)
